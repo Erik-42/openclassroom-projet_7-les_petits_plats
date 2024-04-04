@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --font-default: "Anton", Arial, Helvetica, sans-serif;
+  --font-slab: var(--font-default);
+
+  --defaultBackgroundColor: white;
+  --defaultFontColor: black;
+  --primaryBgColor: lightgrey;
+  --primaryFontColor: black;
+  --secondaryBgColor: #ffd15b;
+  --secondaryFontColor: grey;
+}
+
+.anton-regular {
+  font-family: "Anton", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}

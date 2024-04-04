@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  justify-content: center;
+  height: 667px;
+}
+
+#banniere {
+  width: 100%;
+  height: 100%;
+  /* width: 1440px;
+  height: 667px; */
+  object-fit: cover;
+}
+
+#title {
+  font-size: x-large;
+  color: var(--secondaryBgColor);
+  position: absolute;
+  display: flex;
+}
+
+#slogan {
+  color: var(--secondaryBgColor);
+  position: absolute;
+}
+
+#search {
+  position: absolute;
+}
+#search_input {
+  border-radius: 10px;
+  width: 954px;
+  height: 72px;
+}
+#search_logo {
+  width: 5%;
+  position: absolute;
+}

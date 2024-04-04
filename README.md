@@ -32,7 +32,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
-[![wakatime](https://wakatime.com/badge/github/Erik-42/openclassroom-projet_7-les_petits_plats.svg)](https://wakatime.com/badge/github/Erik-42/openclassroom-projet_7-les_petits_plats)
+[![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/018e9ed5-d712-4f34-9c54-2cfd31f12054.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/018e9ed5-d712-4f34-9c54-2cfd31f12054)
 
 </div>
 Développez un algorithme de recherche en JavaScript
@@ -76,7 +76,7 @@ Pour choisir le meilleur algorithme, il faut tester leurs performances. Pour ça
 
 Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.
 
-Github: [https://github.com/Erik-42/openclassroom-projet_7-les_petits_plats](https://github.com/Erik-42/openclassroom-projet_7-les_petits_plats)
+Github: [https://erik-42.github.io/openclassroom-projet_7-les_petits_plats/](https://erik-42.github.io/openclassroom-projet_7-les_petits_plats/)
 
 <!-- LICENSE -->
 
