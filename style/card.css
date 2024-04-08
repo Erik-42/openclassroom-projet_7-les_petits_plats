@@ -1,0 +1,84 @@
+#containerCardRecipes {
+}
+.cardRecipe {
+  width: 380px;
+  height: 731px;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 1s ease-out;
+}
+.recipeBanner {
+  width: 100%;
+  height: 253px;
+}
+.recipeBanner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.preperTime {
+  background-color: yellow;
+  width: 65px;
+  height: 26px;
+  border-radius: 14px;
+  padding: 5px 15px 5px 15px;
+  position: relative;
+  top: -14rem;
+  left: 17remutils.js;
+}
+.containerRecipe {
+  margin: 2rem 1rem;
+  color: grey;
+  font-size: 12px;
+}
+.recipeTitle {
+  margin: 2rem 0;
+  color: black;
+  font-size: 18px;
+}
+.descriptionRecipe {
+  margin: 1rem 0;
+}
+.ingredientsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem 0;
+}
+.ingredient {
+  margin: 1rem 0;
+  font-weight: 400;
+}
+.ingredient h5 {
+  font-size: 14px;
+  font-weight: 500;
+}
+/* #card {
+  background-color: var(--lightGray);
+  padding: 0;
+  border-radius: 5px;
+}
+ul li {
+  list-style-type: none;
+  font-size: 12px;
+}
+.title {
+  font-size: 18px;
+}
+
+#card .card-img-top {
+  background-color: #c7bebe;
+  border: none;
+  height: 178px;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: calc(0.5rem - 1px);
+  border-top-right-radius: calc(0.5rem - 1px);
+}
+.description {
+  height: 153px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+} */

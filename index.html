@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <title>Les petits plats</title>
+    <title>Les petits plats - Nos meilleures recettes de cuisine</title>
     <!-- HTML Meta Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -87,61 +87,140 @@
         <h1>Les petits plats</h1>
         <img src="./assets/icones/rond-titre.svg" alt="logo les petits plats" />
       </div>
-      <h2 id="slogan">
-        Cherchez parmi plus de 1500 recettes du quotidien, simples et
-        délicieuses
-      </h2>
-      <!-- Search -->
-      <div id="search" class="search">
-        <input
-          type="text"
-          id="search_input"
-          class="search__input"
-          placeholder="Rechercher une recette"
-        />
-        <img
-          id="search_logo"
-          src="./assets/icones/search-solid.svg"
-          alt="logo search"
-        />
+      <div id="containerCentralHeader">
+        <h2 id="slogan">
+          Cherchez parmi plus de 1500 recettes du quotidien, simples et
+          délicieuses
+        </h2>
+        <!-- Search -->
+        <div id="search" class="search">
+          <input
+            type="search"
+            name="search"
+            placeholder="     Rechercher un ingrédient, appareil, ustensiles ou une recette"
+            id="searchInput"
+            aria-label="Rechercher un ingrédient, appareil, ustensiles ou une recette"
+          />
+          <i id="searchLogo" class="fas fa-search"></i>
+          <!-- <div id="tagList">
+            <div id="listTagIngredient"></div>
+            <div id="listTagAppareil"></div>
+            <div id="listTagUstensile"></div>
+          </div> -->
+        </div>
       </div>
     </header>
     <main>
       <!-- Filters -->
-      <div class="filters">
-        <!-- Template - filter-category -->
-        <template id="filter-category-template">
-          <div class="filter" aria-haspopup="false">
-            <button class="filter__button" aria-expanded="false">
-              <span class="filter__button-text"></span>
-              <svg class="filter__button-icon">
-                <use xlink:href="assets/sprite.svg#icon-chevron" />
-              </svg>
-            </button>
-            <div class="filter__dropdown" hidden>
-              <label class="filter__label">
-                <svg class="filter__label-icon">
-                  <use xlink:href="assets/sprite.svg#icon-search" />
-                </svg>
+      <section id="filters">
+        <div id="fisrtLineFilter">
+          <div id="divFilters">
+            <div id="divIngredients" class="divList" tabindex="0">
+              <div class="buttonTitle">
+                <button class="buttonFilter">Ingredients</button>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="containerInput">
                 <input
-                  type="text"
-                  class="filter__input"
-                  placeholder="Rechercher un filtre"
+                  placeholder="Ingrédients"
+                  id="searchIngredients"
+                  class="inputFilter"
                 />
-              </label>
-              <span class="filter__no-results" hidden
-                >Aucun filtre ne correspond à votre recherche.</span
-              >
-              <ul class="filter__list"></ul>
+                <i class="fas fa-search"></i>
+              </div>
+              <ul id="listIngredients" class="list"></ul>
+            </div>
+
+            <div id="divAppareils" class="divList" tabindex="0">
+              <div class="buttonTitle">
+                <button class="buttonFilter">Appareils</button>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="containerInput">
+                <input
+                  placeholder="Appareils"
+                  id="searchAppliances"
+                  class="inputFilter"
+                />
+                <i class="fas fa-search"></i>
+              </div>
+              <ul id="listAppareils" class="list"></ul>
+            </div>
+
+            <div id="divUstensiles" class="divList" tabindex="0">
+              <div class="buttonTitle">
+                <button class="buttonFilter">Ustensiles</button>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="containerInput">
+                <input
+                  placeholder="Ustensiles"
+                  id="searchUstensils"
+                  class="inputFilter"
+                />
+                <i class="fas fa-search"></i>
+              </div>
+              <ul id="listUstensiles" class="list"></ul>
             </div>
           </div>
-        </template>
+          <div id="nbRecipes">nbRecipes</div>
+        </div>
+
+        <div id="selectionFilter">selectionFilter</div>
+      </section>
+
+      <div id="containerCardRecipes" class="containerCardRecipes">
+        <div class="cardRecipe">
+          <div class="recipeBanner">
+            <img src="./assets/images_recipes/Recette01.jpg" alt="recette" />
+            <div class="preperTime">Temps de préparation Recipe</div>
+          </div>
+          <div class="containerRecipe">
+            <h3 class="recipeTitle">Title Recipe</h3>
+            <h4>Recette</h4>
+            <div class="descriptionRecipe">
+              <p>
+                Description Recipe, Description Recipe, Description Recipe,
+                Description Recipe, Description Recipe, Description Recipe,
+                Description Recipe, Description Recipe, Description Recipe,
+                Description Recipe, Description Recipe.
+              </p>
+            </div>
+            <h4>Ingredients</h4>
+            <div class="ingredientsList">
+              <div class="ingredient">
+                <h5>Name Ingredients 1</h5>
+                <p>Qte Ingredient</p>
+              </div>
+              <div class="ingredient">
+                <h5>Name Ingredients 2</h5>
+                <p>Qte Ingredient</p>
+              </div>
+              <div class="ingredient">
+                <h5>Name Ingredients 3</h5>
+                <p>Qte Ingredient</p>
+              </div>
+              <div class="ingredient">
+                <h5>Name Ingredients 4</h5>
+                <p>Qte Ingredient</p>
+              </div>
+              <div class="ingredient">
+                <h5>Name Ingredients 5</h5>
+                <p>Qte Ingredient</p>
+              </div>
+              <div class="ingredient">
+                <h5>Name Ingredients 6</h5>
+                <p>Qte Ingredient</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <span id="no-result" class="hidden"
-        >Aucune recette ne correspond à votre critère... vous pouvez chercher
-        "tarte aux pommes", "poisson", etc.</span
-      >
-      <section id="result-section"></section>
+
+      <span id="noResult" class="hidden">
+        Aucune recette ne correspond à votre critère... vous pouvez chercher
+        "tarte aux pommes", "poisson", etc.
+      </span>
     </main>
   </body>
 </html>

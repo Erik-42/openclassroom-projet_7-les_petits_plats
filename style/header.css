@@ -1,6 +1,6 @@
 header {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   height: 667px;
 }
 
@@ -13,26 +13,55 @@ header {
 }
 
 #title {
-  font-size: x-large;
-  color: var(--secondaryBgColor);
+  color: white;
   position: absolute;
   display: flex;
+  margin: 2rem;
 }
-
+#title img {
+  padding: 0.5rem;
+}
+#containerCentralHeader {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
 #slogan {
   color: var(--secondaryBgColor);
   position: absolute;
+  top: 18rem;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 66.24px;
+  text-align: center;
+  width: 44%;
 }
 
 #search {
   position: absolute;
 }
-#search_input {
+#searchInput {
   border-radius: 10px;
   width: 954px;
   height: 72px;
+  position: relative;
+  top: 27rem;
 }
-#search_logo {
-  width: 5%;
-  position: absolute;
+#searchLogo {
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  top: 28rem;
+  right: 6rem;
+  z-index: 1;
+  cursor: pointer;
+}
+#searchLogo:hover {
+  background-color: var(--secondaryBgColor);
+  color: black;
 }

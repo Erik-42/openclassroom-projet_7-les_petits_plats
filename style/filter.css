@@ -1,0 +1,23 @@
+#filters {
+  margin: 1rem 0;
+  font-size: 16px;
+}
+#fisrtLineFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+#divIngredients {
+  width: 179px;
+  height: 56px;
+}
+#divFilters {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+#nbRecipes {
+  font-size: 18px;
+}
