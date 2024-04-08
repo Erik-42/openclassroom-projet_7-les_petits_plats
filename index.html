@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="permet aux photographes indépendants de présenter leurs meilleurs travaux"
+      content="permet de trouver et reproduire nos meilleures recettes de cuisine"
     />
 
     <!-- Facebook Meta Tags -->
@@ -19,9 +19,9 @@
     <meta property="og:title" content="Les petits plats" />
     <meta
       property="og:description"
-      content="permet aux photographes indépendants de présenter leurs meilleurs travaux"
+      content="permet de trouver et reproduire nos meilleures recettes de cuisine"
     />
-    <meta property="og:image" content="./assets/images/logo.png" />
+    <meta property="og:image" content="./assets/logos/logo.png" />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -33,9 +33,9 @@
     <meta name="twitter:title" content="Les petits plats" />
     <meta
       name="twitter:description"
-      content="permet aux photographes indépendants de présenter leurs meilleurs travaux"
+      content="permet de trouver et reproduire nos meilleures recettes de cuisine"
     />
-    <meta name="twitter:image" content="./assets/images/logo.png" />
+    <meta name="twitter:image" content="./assets/logos/logo.png" />
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
@@ -52,9 +52,13 @@
       type="image/webp"
     />
 
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/logos/lpp_favicon_72.png"
+    />
 
-    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./style/style.css" rel="stylesheet" type="text/css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,20 +66,19 @@
       href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
       rel="stylesheet"
     />
-    <link href="./style/style.css" rel="stylesheet" />
     <link
       href="./assets/logos/lpp_favicon_72.png"
       rel="icon"
       type="image/png"
     />
 
-    <!-- <script src="./pages/accueil/index.js" type="module"></script> -->
     <script
       src="https://kit.fontawesome.com/4ec6d39a0c.js"
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/index.js" type="module"></script>
   </head>
+
   <body>
     <header>
       <img
@@ -168,7 +171,7 @@
 
         <div id="selectionFilter">selectionFilter</div>
       </section>
-
+      <!-- cards -->
       <div id="containerCardRecipes" class="containerCardRecipes">
         <div class="cardRecipe">
           <div class="recipeBanner">
@@ -216,7 +219,7 @@
           </div>
         </div>
       </div>
-
+      <!-- Result search -->
       <span id="noResult" class="hidden">
         Aucune recette ne correspond à votre critère... vous pouvez chercher
         "tarte aux pommes", "poisson", etc.

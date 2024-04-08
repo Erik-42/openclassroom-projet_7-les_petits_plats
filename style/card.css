@@ -25,7 +25,7 @@
   padding: 5px 15px 5px 15px;
   position: relative;
   top: -14rem;
-  left: 17remutils.js;
+  left: 17rem;
 }
 .containerRecipe {
   margin: 2rem 1rem;
@@ -53,32 +53,3 @@
   font-size: 14px;
   font-weight: 500;
 }
-/* #card {
-  background-color: var(--lightGray);
-  padding: 0;
-  border-radius: 5px;
-}
-ul li {
-  list-style-type: none;
-  font-size: 12px;
-}
-.title {
-  font-size: 18px;
-}
-
-#card .card-img-top {
-  background-color: #c7bebe;
-  border: none;
-  height: 178px;
-  object-fit: cover;
-  width: 100%;
-  border-top-left-radius: calc(0.5rem - 1px);
-  border-top-right-radius: calc(0.5rem - 1px);
-}
-.description {
-  height: 153px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 12px;
-} */
