@@ -77,6 +77,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/index.js" type="module"></script>
+    <script src="./scripts/dropdown/dropdown.js" type="module"></script>
   </head>
 
   <body>
@@ -105,11 +106,6 @@
             aria-label="Rechercher un ingrédient, appareil, ustensiles ou une recette"
           />
           <i id="searchLogo" class="fas fa-search"></i>
-          <!-- <div id="tagList">
-            <div id="listTagIngredient"></div>
-            <div id="listTagAppareil"></div>
-            <div id="listTagUstensile"></div>
-          </div> -->
         </div>
       </div>
     </header>
@@ -119,57 +115,79 @@
         <div id="fisrtLineFilter">
           <div id="divFilters">
             <div id="divIngredients" class="divList" tabindex="0">
-              <div class="buttonTitle">
-                <button class="buttonFilter">Ingredients</button>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="containerInput">
-                <input
-                  placeholder="Ingrédients"
-                  id="searchIngredients"
-                  class="inputFilter"
-                />
-                <i class="fas fa-search"></i>
-              </div>
-              <ul id="listIngredients" class="list"></ul>
+              <button id="btnIngredients" class="buttonFilter">
+                <div class="containerButton">
+                  <span class="buttonTitle">Ingredients</span>
+                  <span class="fas fa-chevron-down"></span>
+                </div>
+              </button>
+              <ul id="listIngredients" class="list">
+                <div class="containerInput">
+                  <input
+                    type="search"
+                    placeholder="Ingrédients"
+                    id="searchIngredients"
+                    class="inputFilter"
+                    aria-label="Rechercher un ingrédient"
+                    name="searchIngredient"
+                  />
+                  <span class="loupe fas fa-search"></span>
+                </div>
+              </ul>
             </div>
 
-            <div id="divAppareils" class="divList" tabindex="0">
-              <div class="buttonTitle">
-                <button class="buttonFilter">Appareils</button>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="containerInput">
-                <input
-                  placeholder="Appareils"
-                  id="searchAppliances"
-                  class="inputFilter"
-                />
-                <i class="fas fa-search"></i>
-              </div>
-              <ul id="listAppareils" class="list"></ul>
+            <div id="divAppliances" class="divList" tabindex="0">
+              <button id="btnAppliances" class="buttonFilter">
+                <div class="containerButton">
+                  <span class="buttonTitle">Appareil</span>
+                  <span class="fas fa-chevron-down"></span>
+                </div>
+              </button>
+              <ul id="listAppliances" class="list">
+                <div class="containerInput">
+                  <input
+                    type="search"
+                    placeholder="Appareils"
+                    id="searchAppliance"
+                    class="inputFilter"
+                    aria-label="Rechercher un appareil"
+                    name="searchAppliance"
+                  />
+                  <span class="loupe fas fa-search"></span>
+                </div>
+              </ul>
             </div>
 
-            <div id="divUstensiles" class="divList" tabindex="0">
-              <div class="buttonTitle">
-                <button class="buttonFilter">Ustensiles</button>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="containerInput">
-                <input
-                  placeholder="Ustensiles"
-                  id="searchUstensils"
-                  class="inputFilter"
-                />
-                <i class="fas fa-search"></i>
-              </div>
-              <ul id="listUstensiles" class="list"></ul>
+            <div id="divUstensils" class="divList" tabindex="0">
+              <button id="btnUstensils" class="buttonFilter">
+                <div class="containerButton">
+                  <span class="buttonTitle">Ustensiles</span>
+                  <span class="fas fa-chevron-down"></span>
+                </div>
+              </button>
+              <ul id="listUstensils" class="list">
+                <div class="containerInput">
+                  <input
+                    type="search"
+                    placeholder="Ustensiles"
+                    id="searchUstensil"
+                    class="inputFilter"
+                    aria-label="Rechercher un ingédient"
+                    name="searchUstensil"
+                  />
+                  <span class="loupe fas fa-search"></span>
+                </div>
+              </ul>
             </div>
           </div>
           <div id="nbRecipes">nbRecipes</div>
         </div>
 
-        <div id="selectionFilter">selectionFilter</div>
+        <div id="tagList">
+          <div id="listTagIngredient"></div>
+          <div id="listTagAppareil"></div>
+          <div id="listTagUstensile"></div>
+        </div>
       </section>
       <!-- cards -->
       <div id="containerCardRecipes" class="containerCardRecipes">

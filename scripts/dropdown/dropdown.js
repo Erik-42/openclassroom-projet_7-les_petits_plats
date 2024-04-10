@@ -1,72 +1,133 @@
-import { sortMedia } from "../../utils/sortMedia.js";
-import { dropDownEvent } from "../../scripts/elements/dropdownSort/dropdownSort.js";
+// import { getRecips } from "../../scripts/utils/getData.js";
 
-export function dropDownEvent() {
-  const nameBtn = document.getElementById("nameBtn");
-  const dropdownBtn = document.getElementById("dropdownSelector");
-  dropdownBtn.addEventListener("click", () => {
-    dropdownMenu();
+// 1er methode
+// export function toggle(type) {
+//   switch (type) {
+//     case "divIngredients":
+//       document.querySelector(`.${type}`).classList.toggle("expanded");
+//       document.querySelector(`.divAppliances`).classList.remove("expanded");
+//       document.querySelector(`.divUstensils`).classList.remove("expanded");
+
+//       break;
+//     case "divAppliances":
+//       document.querySelector(`.${type}`).classList.toggle("expanded");
+//       document.querySelector(`.divIngredients`).classList.remove("expanded");
+//       document.querySelector(`.divUstensils`).classList.remove("expanded");
+
+//       break;
+//     case "divUstensils":
+//       document.querySelector(`.${type}`).classList.toggle("expanded");
+//       document.querySelector(`.divAppliances`).classList.remove("expanded");
+//       document.querySelector(`.divIngredients`).classList.remove("expanded");
+
+//       break;
+//     default:
+//       document.querySelector(`.${type}`).classList.remove("expanded");
+//       break;
+//   }
+// }
+
+// 2eme methode
+// /**
+//  * toggleDivList - ouvre le div list lorsque que l'élément est click
+//  */
+// const divIngredient = document.getElementById("#divIngredients");
+// const divAppareil = document.getElementById("#divAppareils");
+// const divUstensile = document.getElementById("#divUstensiles");
+// const list = document.querySelector(".list");
+
+// export const toggleDivList = () => {
+//   arrayEvent.forEach((click) => {
+//     [divIngredient, divAppareil, divUstensile].forEach((element) => {
+//       element.querySelector(".buttonFilter").addEventListener(click, () => {
+//         if (list !== `style.display = "none"`) {
+//           // On ferme tous les listes
+//           for (let i = 0; i < 3; i++) {
+//             let list = document.querySelectorAll(".list")[i];
+//             list.querySelector(".fa-chevron-up").style.transform =
+//               "rotate(180deg)";
+//             list.querySelector(list).style.display = "none";
+//           }
+//
+//           if (element === divIngredient) {
+//             element.querySelector(
+//               "button"
+//             ).innerHTML = `<div class="containerInput">
+//                 <input type="search" placeholder="Ingrédients"               id="searchIngredients" class="inputFilter" aria-label="Rechercher un ingrédient"   name="searchIngredient">
+//                 <span class="loupe fas fa-search"></span>
+//               </div>`;
+//           } else if (element === divAppareil) {
+//             element.querySelector("button").innerHTML =
+//               '<input type="search" placeholder="Rechercher un appareil" aria-label="Rechercher un appareil" name="searchAppareil" id="searchAppareil" class="searchInputList">';
+//           } else if (element === divUstensile) {
+//             element.querySelector("button").innerHTML =
+//               '<input type="search" placeholder="Rechercher un ustensile" aria-label="Rechercher un ustensile" name="searchUstensile" id="searchUstensile" class="searchInputList">';
+//           }
+//           element.querySelector(".fa-chevron-up").style.transform =
+//             "rotate(0deg)";
+//           element.querySelector("div").style.display = "flex";
+//         } else {
+//           closeDivList(element);
+//         }
+//       });
+//     });
+//   });
+// };
+
+// /**
+//  * closeDivList - ferme l'element passé
+//  * @param  {Array} element élément html du dom
+//  */
+// const closeDivList = (element) => {
+//   element.querySelector(".fa-chevron-up").style.transform = "rotate(180deg)";
+//   element.querySelector("ul").style.display = "none";
+// };
+
+// const initDataPage = (data) => {
+//   toggleDivList();
+//   closeDivList();
+// };
+
+// 3eme methode
+export function toggleDropdown() {
+  const buttonFilter = document.querySelector("buttonFilter");
+  buttonFilter.addEventListener("click", () => {
+    toggleDropdown();
   });
 
-  const btnPop = document.getElementById("popularity");
-  btnPop.addEventListener("click", (e) => {
+  const btnIngredients = document.getElementById("#btnIngredients");
+  const listIngredients = document.getElementById("#listIngredients");
+  btnIngredients.addEventListener("click", (e) => {
     e.preventDefault();
-    nameBtn.innerText = "Popularité";
-    sortMedia("popularity");
+    if (listIngredients !== classList("show")) {
+      document.getElementById("#listIngredients").classList.toggle("show");
+    } else {
+      document.getElementById("#listIngredients").classList.remove("show");
+    }
   });
 
-  const btnDate = document.getElementById("date");
-  btnDate.addEventListener("click", (e) => {
+  const btnAppliances = document.getElementById("btnAppliances");
+  btnAppliances.addEventListener("click", (e) => {
     e.preventDefault();
-    nameBtn.innerText = "Date";
-    sortMedia("date");
+    if (listAppliances !== classList("show")) {
+      document.getElementById("#listAppliances").classList.toggle("show");
+    } else {
+      document.getElementById("#listAppliances").classList.remove("show");
+    }
   });
 
-  const btnTitre = document.getElementById("titre");
-  btnTitre.addEventListener("click", (e) => {
+  const btnUstensils = document.getElementById("btnUstensils");
+  btnUstensils.addEventListener("click", (e) => {
     e.preventDefault();
-    nameBtn.innerText = "Titre";
-    sortMedia("title");
+    if (listUstensils !== classList("show")) {
+      document.getElementById("#listUstensils").classList.toggle("show");
+    } else {
+      document.getElementById("#listUstensils").classList.remove("show");
+    }
   });
 }
+console.log(toggleDropdown);
 
-function dropdownMenu() {
-  document.getElementById("dropdownSelector__list").classList.toggle("show");
-}
-async function init() {
-  dropDownEvent();
-}
-
-init();
-
-import {
-  displayMedias,
-  medias,
-  photographer,
-} from "../../pages/photographer/photographerPage.js";
-
-function clearHTMLMedia(htmlMedia) {
-  while (htmlMedia.firstChild) {
-    htmlMedia.removeChild(htmlMedia.lastChild);
-  }
-}
-
-export async function sortMedia(value) {
-  const sectionMedia = document.querySelector(".photograph__gallery");
-  clearHTMLMedia(sectionMedia);
-
-  switch (value) {
-    case "popularity":
-      medias.sort((a, b) => b.likes - a.likes);
-      break;
-
-    case "date":
-      medias.sort((a, b) => new Date(b.date) - new Date(a.date));
-      break;
-
-    case "title":
-      medias.sort((a, b) => a.title.localeCompare(b.title));
-      break;
-  }
-  displayMedias(medias, photographer.name);
-}
+// function toggleDropdown() {
+//   document.querySelector(".list").classList.toggle("show");
+// }

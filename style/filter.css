@@ -4,20 +4,63 @@
 }
 #fisrtLineFilter {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   margin: 1rem 0;
 }
 
-#divIngredients {
-  width: 179px;
-  height: 56px;
-}
 #divFilters {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
+
+.buttonFilter {
+  width: 195px;
+  height: 56px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.containerButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.containerInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputFilter {
+  color: grey;
+  border: solid 1px grey;
+  border-radius: 2px;
+  width: 163px;
+  height: 36px;
+  padding: 0.5rem;
+  font-size: 14px;
+  margin: 1rem;
+  /* display: none; */
+}
+.loupe {
+  position: relative;
+  right: 40px;
+  /* display: none; */
+}
+
+.list {
+  width: 195px;
+  height: 315px;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  /* display: none; */
+}
 #nbRecipes {
   font-size: 18px;
+}
+
+.show {
+  display: flex;
 }
