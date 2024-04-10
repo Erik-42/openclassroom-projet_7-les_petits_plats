@@ -90,37 +90,47 @@
 
 // 3eme methode
 export function toggleDropdown() {
-  const buttonFilter = document.querySelector("buttonFilter");
-  buttonFilter.addEventListener("click", () => {
-    toggleDropdown();
-  });
+  // const buttonFilter = document.querySelector("buttonFilter");
+  // buttonFilter.addEventListener("click", () => {
+  //   toggleDropdown();
+  // });
 
   const btnIngredients = document.getElementById("#btnIngredients");
   const listIngredients = document.getElementById("#listIngredients");
+  const btnAppliances = document.getElementById("#btnAppliances");
+  const listAppliances = document.getElementById("#listAppliances");
+  const btnUstensils = document.getElementById("#btnUstensils");
+  const listUstensils = document.getElementById("#listUstensils");
+
   btnIngredients.addEventListener("click", (e) => {
     e.preventDefault();
     if (listIngredients !== classList("show")) {
       document.getElementById("#listIngredients").classList.toggle("show");
+      document.getElementById("#listAppliances").classList.remove("show");
+      document.getElementById("#listUstensils").classList.remove("show");
     } else {
       document.getElementById("#listIngredients").classList.remove("show");
     }
   });
+  console.log(listIngredients);
 
-  const btnAppliances = document.getElementById("btnAppliances");
   btnAppliances.addEventListener("click", (e) => {
     e.preventDefault();
     if (listAppliances !== classList("show")) {
       document.getElementById("#listAppliances").classList.toggle("show");
+      document.getElementById("#listUstensils").classList.remove("show");
+      document.getElementById("#listIngredients").classList.remove("show");
     } else {
       document.getElementById("#listAppliances").classList.remove("show");
     }
   });
 
-  const btnUstensils = document.getElementById("btnUstensils");
   btnUstensils.addEventListener("click", (e) => {
     e.preventDefault();
     if (listUstensils !== classList("show")) {
       document.getElementById("#listUstensils").classList.toggle("show");
+      document.getElementById("#listIngredients").classList.remove("show");
+      document.getElementById("#listAppliances").classList.remove("show");
     } else {
       document.getElementById("#listUstensils").classList.remove("show");
     }
