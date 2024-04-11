@@ -1,4 +1,4 @@
-export function recipeTemplate(data) {
+export function recipeTemplate(dataRecipe) {
   const {
     id,
     image,
@@ -7,15 +7,15 @@ export function recipeTemplate(data) {
     description,
     appliance,
     ustensils,
-    ingredients: [ingredient, quantity, unit],
-  } = data;
+    ingredients,
+  } = dataRecipe;
 
   const picture = `../../assets/images_recipes/${image}`;
 
   function cardDOM() {
-    const cardRecipeStructure = document.getElementById("containerCardRecipes");
+    const cardRecipeStructure = document.createElement("div");
     cardRecipeStructure.innerHTML = `
-               <div class="cardRecipe">
+        <div class="cardRecipe">
           <div class="recipeBanner">
             <img src="${picture}" alt="${name}" />
             <div class="preperTime">${time}</div>
@@ -29,29 +29,10 @@ export function recipeTemplate(data) {
             <h4>Ingredients</h4>
             <div class="ingredientsList">
               <div class="ingredient">
-                <h5 class="nameIngredient">${ingredient}</h5>
-                <p class="qteIngredient">${quantity} ${unit}</p>
+                <h5 class="nameIngredient">${ingredients[0].ingredient}</h5>
+                <p class="qteIngredient">${ingredients[0].quantity} ${ingredients[0].unit}</p>
               </div>
-              <div class="ingredient">
-                <h5 class="nameIngredient">${ingredient}</h5>
-                <p class="qteIngredient">${quantity} ${unit}</p>
-              </div>
-              <div class="ingredient">
-                <h5 class="nameIngredient">${ingredient}</h5>
-                <p class="qteIngredient">${quantity} ${unit}</p>
-              </div>
-              <div class="ingredient">
-                <h5 class="nameIngredient">${ingredient}</h5>
-                <p class="qteIngredient">${quantity} ${unit}</p>
-              </div>
-              <div class="ingredient">
-                <h5 class="nameIngredient">${ingredient}</h5>
-                <p class="qteIngredient">${quantity} ${unit}</p>
-              </div>
-              <div class="ingredient">
-                <h5 class="nameIngredient">${ingredient}</h5>
-                <p class="qteIngredient">${quantity} ${unit}</p>
-              </div>
+             
             </div>
           </div>
         </div>`;
@@ -66,7 +47,7 @@ export function recipeTemplate(data) {
     description,
     appliance,
     ustensils,
-    ingredients: [ingredient, quantity, unit],
+    ingredients,
     cardDOM,
   };
 }

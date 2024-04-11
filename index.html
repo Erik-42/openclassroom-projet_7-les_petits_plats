@@ -67,6 +67,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="./assets/logos/lpp_favicon_72.png"
       rel="icon"
       type="image/png"
@@ -77,7 +81,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/index.js" type="module"></script>
-    <script src="./scripts/dropdown/dropdown.js" type="module"></script>
+    <script src="./scripts/dropdown/dropdownFilter.js" type="module"></script>
   </head>
 
   <body>
@@ -100,9 +104,9 @@
           <input
             type="search"
             name="search"
-            placeholder="     Rechercher un ingrédient, appareil, ustensiles ou une recette"
+            placeholder="     Rechercher un ingrédient, un appareil, un ustensiles ou une recette"
             id="searchInput"
-            aria-label="Rechercher un ingrédient, appareil, ustensiles ou une recette"
+            aria-label="Rechercher un ingrédient, un appareil, un ustensiles ou une recette"
           />
           <span id="searchLogo" class="fas fa-search"></span>
         </div>
@@ -111,7 +115,7 @@
     <main>
       <!-- Filters -->
       <section id="filters">
-        <div id="fisrtLineFilter">
+        <div id="filterLine">
           <div id="divFilters">
             <div id="divIngredients" class="divList" tabindex="0">
               <button id="btnIngredients" class="buttonFilter">
@@ -120,7 +124,7 @@
                   <span class="fas fa-chevron-down"></span>
                 </div>
               </button>
-              <ul id="listIngredients" class="list">
+              <ul id="listIngredients" class="ulList">
                 <div class="containerInput">
                   <input
                     type="search"
@@ -132,6 +136,13 @@
                   />
                   <span class="loupe fas fa-search"></span>
                 </div>
+                <div id="ingredientsList" class="list">
+                  <p class="listP ingredient" index="1">Liste Ingrédients 1</p>
+                  <p class="listP ingredient" index="1">Liste Ingrédients 2</p>
+                  <p class="listP ingredient" index="1">Liste Ingrédients 3</p>
+                  <p class="listP ingredient" index="1">Liste Ingrédients 4</p>
+                  <p class="listP ingredient" index="1">Liste Ingrédients 5</p>
+                </div>
               </ul>
             </div>
 
@@ -142,7 +153,7 @@
                   <span class="fas fa-chevron-down"></span>
                 </div>
               </button>
-              <ul id="listAppliances" class="list">
+              <ul id="listAppliances" class="ulList">
                 <div class="containerInput">
                   <input
                     type="search"
@@ -154,6 +165,13 @@
                   />
                   <span class="loupe fas fa-search"></span>
                 </div>
+                <div id="appliancesList" class="list">
+                  <p class="listP appliance" index="1">Liste Appareils 1</p>
+                  <p class="listP appliance" index="1">Liste Appareils 2</p>
+                  <p class="listP appliance" index="1">Liste Appareils 3</p>
+                  <p class="listP appliance" index="1">Liste Appareils 4</p>
+                  <p class="listP appliance" index="1">Liste Appareils 5</p>
+                </div>
               </ul>
             </div>
 
@@ -164,7 +182,7 @@
                   <span class="fas fa-chevron-down"></span>
                 </div>
               </button>
-              <ul id="listUstensils" class="list">
+              <ul id="listUstensils" class="ulList">
                 <div class="containerInput">
                   <input
                     type="search"
@@ -176,18 +194,35 @@
                   />
                   <span class="loupe fas fa-search"></span>
                 </div>
+                <div id="ustensilsList" class="list">
+                  <p class="listP ustensils" index="1">Liste Ustensiles 1</p>
+                  <p class="listP ustensils" index="1">Liste Ustensiles 2</p>
+                  <p class="listP ustensils" index="1">Liste Ustensiles 3</p>
+                  <p class="listP ustensils" index="1">Liste Ustensiles 4</p>
+                  <p class="listP ustensils" index="1">Liste Ustensiles 5</p>
+                </div>
               </ul>
             </div>
           </div>
-          <div id="nbRecipes">nbRecipes</div>
+          <div id="nbRecipes">nbRecipes recettes</div>
         </div>
 
         <div id="tagList">
-          <div id="listTagIngredient"></div>
-          <div id="listTagAppareil"></div>
-          <div id="listTagUstensile"></div>
+          <div id="listTagIngredient" class="tag">
+            <span>listTagIngredient</span>
+            <span class="fa fa-xmark"></span>
+          </div>
+          <div id="listTagAppareil" class="tag">
+            <span>listTagAppareil</span>
+            <span class="fa fa-xmark"></span>
+          </div>
+          <div id="listTagUstensile" class="tag">
+            <span>listTagUstensile</span>
+            <span class="fa fa-xmark"></span>
+          </div>
         </div>
       </section>
+
       <!-- cards -->
       <div id="containerCardRecipes" class="containerCardRecipes">
         <div class="cardRecipe">

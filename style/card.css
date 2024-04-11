@@ -24,8 +24,9 @@
   border-radius: 14px;
   padding: 5px 15px 5px 15px;
   position: relative;
-  top: -14rem;
-  left: 17rem;
+  top: -15rem;
+  left: 18rem;
+  font-family: var(--font-filter);
 }
 .containerRecipe {
   margin: 2rem 1rem;
