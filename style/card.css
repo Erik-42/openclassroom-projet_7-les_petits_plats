@@ -22,11 +22,14 @@
   width: 65px;
   height: 26px;
   border-radius: 14px;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 15px 5px 5px;
   position: relative;
   top: -15rem;
   left: 18rem;
   font-family: var(--font-filter);
+  display: flex;
+  align-items: center;
+  font-weight: 700;
 }
 .containerRecipe {
   margin: 2rem 1rem;

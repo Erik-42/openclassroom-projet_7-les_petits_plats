@@ -54,27 +54,3 @@ const btnUstensils = document.querySelector("#btnUstensils");
 btnUstensils.addEventListener("click", () => {
   toggleUstensils();
 });
-
-// function rotateChevronIng() {
-//   const chevron = document.querySelector(
-//     "#btnIngredients .fas.fa-chevron-down"
-//   );
-//   chevron.classList.toggle("rotateUp");
-// }
-// function rotateChevronUst() {
-//   const chevron = document.querySelector("#btnUstensils .fas.fa-chevron-down");
-//   chevron.classList.toggle("rotateUp");
-// }
-// function rotateChevronApp() {
-//   const chevron = document.querySelector("#btnAppliances .fas.fa-chevron-down");
-//   chevron.classList.toggle("rotateUp");
-
-// export function tagvisible() {
-//   document.querySelector("#listIngredients").classList.toggle("showList");
-//   document.querySelector("#listAppliances").classList.remove("showList");
-//   document.querySelector("#listUstensils").classList.remove("showList");
-// }
-// const listP = document.querySelector("#listP");
-// listP.addEventListener("click", () => {
-//   tagvisible();
-// });

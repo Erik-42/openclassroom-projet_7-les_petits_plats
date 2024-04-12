@@ -18,7 +18,7 @@ export function recipeTemplate(dataRecipe) {
         <div class="cardRecipe">
           <div class="recipeBanner">
             <img src="${picture}" alt="${name}" />
-            <div class="preperTime">${time}</div>
+            <div class="preperTime">${time}min</div>
           </div>
           <div class="containerRecipe">
             <h3 class="recipeTitle">${name}</h3>
@@ -36,6 +36,30 @@ export function recipeTemplate(dataRecipe) {
             </div>
           </div>
         </div>`;
+
+    // const ingredientsList = document.querySelector(".ingredientsList");
+    // ingredients.forEach((ingredient) => {
+    //   const divIngredients = document.createElement("div");
+    //   divIngredients.classList("ingredient");
+
+    //   const h5Name = document.createElement("h5");
+    //   h5Name.classList("nameIngredient");
+    //   h5Name.textContent = `${ingredients[0].ingredient}`;
+
+    //   divIngredients.appendChild(h5Name);
+
+    //   if (ingredient.quantity !== null && ingredient.quantity !== undefined) {
+    //     const pQteIngredient = document.createElement("p");
+    //     pQteIngredient.classList("qteIngredient");
+    //     pQteIngredient.textContent = `${ingredients[0].quantity}`;
+
+    //     if (ingredient.unit !== null && ingredient.unit !== undefined) {
+    //       pQteIngredient.textContent = `${ingredients[0].quantity} ${ingredients[0].unit}`;
+    //     }
+    //     divIngredients.appendChild(pQteIngredient);
+    //   }
+    //   ingredientsList.appendChild(divIngredients);
+    // });
 
     return cardRecipeStructure;
   }

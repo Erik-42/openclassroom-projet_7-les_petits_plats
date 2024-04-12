@@ -7,12 +7,14 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 1rem 0 2rem 0;
 }
 
 #divFilters {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 
@@ -30,7 +32,11 @@
   justify-content: space-between;
   padding: 1rem;
 }
-
+.buttonTitle {
+  font-family: var(--font-filter);
+  font-weight: 700;
+  font-size: 16px;
+}
 .rotateUp {
   transform: rotate(180deg);
   transition: transform 0.3s ease-in-out;
@@ -60,6 +66,7 @@
   padding: 0.5rem;
   font-size: 14px;
   margin: 1rem;
+  font-family: var(--font-filter);
 }
 .loupe {
   position: relative;
@@ -68,7 +75,18 @@
 .list {
   font-family: var(--font-filter);
   font-weight: 400;
-  margin: 4rem 1rem 0;
+  margin: 4rem 0 0;
+  overflow: auto;
+  width: 100%;
+}
+.listP {
+  font-family: var(--font-filter);
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+}
+.listP:hover {
+  font-weight: 800;
+  background-color: var(--secondaryBgColor);
 }
 #tagList {
   display: flex;

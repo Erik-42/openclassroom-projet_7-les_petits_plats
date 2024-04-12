@@ -5,13 +5,13 @@ export function majAppareil(recipes) {
   liste.innerHTML = "";
   const myAppliances = new Set();
   recipes.forEach((recipe) => {
-    myAppliances.add(recipe.appliance);
+    myAppliances.add(recipe.appliance.toLowerCase());
   });
   const myAppliancesArray = Array.from(myAppliances);
   myAppliancesArray.sort((a, b) => a.localeCompare(b));
   myAppliancesArray.forEach((appliance) => {
     const elem = document.createElement("p");
-    elem.className = "listP appliance";
+    elem.className = "listP";
     elem.innerText = appliance;
     elem.addEventListener("click", () => {
       if (
