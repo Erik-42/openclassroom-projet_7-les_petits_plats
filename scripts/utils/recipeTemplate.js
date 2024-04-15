@@ -37,6 +37,9 @@ export function recipeTemplate(dataRecipe) {
           </div>
         </div>`;
 
+    return cardRecipeStructure;
+  }
+  function ingredientsDOM() {
     const ingredientsList = document.querySelector(".ingredientsList");
     ingredients.forEach((ingredient) => {
       const divIngredients = document.createElement("div");
@@ -52,8 +55,6 @@ export function recipeTemplate(dataRecipe) {
         pQteIngredient.classList("qteIngredient");
         pQteIngredient.textContent = `${ingredients[0].quantity}`;
 
-        console.log(pQteIngredient);
-
         if (ingredient.unit !== null && ingredient.unit !== undefined) {
           pQteIngredient.textContent = `${ingredients[0].quantity} ${ingredients[0].unit}`;
         }
@@ -61,9 +62,9 @@ export function recipeTemplate(dataRecipe) {
       }
       ingredientsList.appendChild(divIngredients);
     });
-
-    return cardRecipeStructure;
+    return ingredientsList, ingredientsDOM;
   }
+  console.log(ingredients.ingredient);
   return {
     id,
     image,
