@@ -37,29 +37,30 @@ export function recipeTemplate(dataRecipe) {
           </div>
         </div>`;
 
-    // const ingredientsList = document.querySelector(".ingredientsList");
-    // ingredients.forEach((ingredient) => {
-    //   const divIngredients = document.createElement("div");
-    //   divIngredients.classList("ingredient");
+    const ingredientsList = document.querySelector(".ingredientsList");
+    ingredients.forEach((ingredient) => {
+      const divIngredients = document.createElement("div");
+      divIngredients.classList("ingredient");
+      const h5Name = document.createElement("h5");
+      h5Name.classList("nameIngredient");
+      h5Name.textContent = `${ingredients[0].ingredient}`;
 
-    //   const h5Name = document.createElement("h5");
-    //   h5Name.classList("nameIngredient");
-    //   h5Name.textContent = `${ingredients[0].ingredient}`;
+      divIngredients.appendChild(h5Name);
 
-    //   divIngredients.appendChild(h5Name);
+      if (ingredient.quantity !== null && ingredient.quantity !== undefined) {
+        const pQteIngredient = document.createElement("p");
+        pQteIngredient.classList("qteIngredient");
+        pQteIngredient.textContent = `${ingredients[0].quantity}`;
 
-    //   if (ingredient.quantity !== null && ingredient.quantity !== undefined) {
-    //     const pQteIngredient = document.createElement("p");
-    //     pQteIngredient.classList("qteIngredient");
-    //     pQteIngredient.textContent = `${ingredients[0].quantity}`;
+        console.log(pQteIngredient);
 
-    //     if (ingredient.unit !== null && ingredient.unit !== undefined) {
-    //       pQteIngredient.textContent = `${ingredients[0].quantity} ${ingredients[0].unit}`;
-    //     }
-    //     divIngredients.appendChild(pQteIngredient);
-    //   }
-    //   ingredientsList.appendChild(divIngredients);
-    // });
+        if (ingredient.unit !== null && ingredient.unit !== undefined) {
+          pQteIngredient.textContent = `${ingredients[0].quantity} ${ingredients[0].unit}`;
+        }
+        divIngredients.appendChild(pQteIngredient);
+      }
+      ingredientsList.appendChild(divIngredients);
+    });
 
     return cardRecipeStructure;
   }
