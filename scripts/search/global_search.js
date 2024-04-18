@@ -6,9 +6,11 @@ import { majAppareil } from "./majAppareil.js";
 import { majIngredients } from "./majIngredients.js";
 import { majUstensils } from "./majUstensiles.js";
 import { tagSearch } from "./tag_search.js";
+import { displayTags } from "./display_tags.js";
 
 export function globalSearch() {
   //   console.log("recherche");
+  displayTags();
   const inputValue = document.getElementById("searchInput").value;
   const allRecipes = [...recipes];
   const recipesFilterByInput = inputSearch(inputValue, allRecipes);
@@ -19,5 +21,5 @@ export function globalSearch() {
   majIngredients(recipesFilterByTags);
   majAppareil(recipesFilterByTags);
   majUstensils(recipesFilterByTags);
-  displayRecipes(recipes);
+  displayRecipes(recipesFilterByTags);
 }

@@ -44,10 +44,14 @@
 .descriptionRecipe {
   margin: 1rem 0;
 }
-.ingredientsList {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 1rem 0;
+.ingredientList {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+  /* margin: 1rem 0; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 3rem;
+  justify-content: space-between;
 }
 .ingredient {
   margin: 1rem 0;

@@ -1,0 +1,27 @@
+#tagList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 1rem;
+  font-family: var(--font-filter);
+  margin: 0 0 3rem 0;
+  /* display: none; */
+}
+.tag {
+  background-color: yellow;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 400;
+}
+.tagTitle {
+  padding: 0 2rem 0 0;
+  font-family: var(--font-filter);
+}
+.fa-xmark {
+  font-size: x-large;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.showTag {
+  display: flex;
+}

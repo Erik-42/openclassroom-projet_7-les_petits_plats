@@ -1,5 +1,6 @@
 import { globalSearch } from "./global_search.js";
 import { tags } from "../utils/tags.js";
+
 export function majAppareil(recipes) {
   const liste = document.getElementById("appliancesList");
   liste.innerHTML = "";
@@ -7,6 +8,7 @@ export function majAppareil(recipes) {
   recipes.forEach((recipe) => {
     myAppliances.add(recipe.appliance.toLowerCase());
   });
+
   const myAppliancesArray = Array.from(myAppliances);
   myAppliancesArray.sort((a, b) => a.localeCompare(b));
   myAppliancesArray.forEach((appliance) => {

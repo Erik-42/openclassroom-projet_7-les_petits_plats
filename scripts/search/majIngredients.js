@@ -1,3 +1,6 @@
+import { globalSearch } from "./global_search.js";
+import { tags } from "../utils/tags.js";
+
 export function majIngredients(recipes) {
   const liste = document.getElementById("ingredientsList");
   liste.innerHTML = "";
@@ -10,6 +13,24 @@ export function majIngredients(recipes) {
   const myIngredientsArray = Array.from(myIngredients);
   myIngredientsArray.sort((a, b) => a.localeCompare(b));
   myIngredientsArray.forEach((ingredient) => {
-    liste.innerHTML += `<p class="listP">${ingredient}</p>`;
+    // liste.innerHTML += `<p class="listP">${ingredient}</p>`;
+    const elem = document.createElement("p");
+    elem.className = "listP";
+    elem.innerText = ingredient;
+    elem.addEventListener("click", () => {
+      if (
+        tags.findIndex(
+          (t) => t.type === "ingredient" && t.value === ingredient
+        ) == -1
+      ) {
+        tags.push({
+          type: "ingredient",
+          value: ingredient,
+        });
+        console.log(tags);
+        globalSearch();
+      }
+    });
+    liste.appendChild(elem);
   });
 }

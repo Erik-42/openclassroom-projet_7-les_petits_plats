@@ -27,44 +27,27 @@ export function recipeTemplate(dataRecipe) {
               <p>${description}</p>
             </div>
             <h4>Ingredients</h4>
-            <div class="ingredientsList">
-              <div class="ingredient">
-                <h5 class="nameIngredient">${ingredients[0].ingredient}</h5>
-                <p class="qteIngredient">${ingredients[0].quantity} ${ingredients[0].unit}</p>
-              </div>
-             
+            <div class="ingredientList">
+            ${ingredients.map((ingredient) => ingredientsDOM(ingredient))}
             </div>
           </div>
         </div>`;
 
     return cardRecipeStructure;
   }
-  function ingredientsDOM() {
-    const ingredientsList = document.querySelector(".ingredientsList");
-    ingredients.forEach((ingredient) => {
-      const divIngredients = document.createElement("div");
-      divIngredients.classList("ingredient");
-      const h5Name = document.createElement("h5");
-      h5Name.classList("nameIngredient");
-      h5Name.textContent = `${ingredients[0].ingredient}`;
-
-      divIngredients.appendChild(h5Name);
-
-      if (ingredient.quantity !== null && ingredient.quantity !== undefined) {
-        const pQteIngredient = document.createElement("p");
-        pQteIngredient.classList("qteIngredient");
-        pQteIngredient.textContent = `${ingredients[0].quantity}`;
-
-        if (ingredient.unit !== null && ingredient.unit !== undefined) {
-          pQteIngredient.textContent = `${ingredients[0].quantity} ${ingredients[0].unit}`;
-        }
-        divIngredients.appendChild(pQteIngredient);
-      }
-      ingredientsList.appendChild(divIngredients);
-    });
-    return ingredientsList, ingredientsDOM;
+  function ingredientsDOM(ingredient) {
+    return `
+    <div class="ingredient">
+                <h5 class="nameIngredient">${
+                  ingredient.ingredient ? ingredient.ingredient : ""
+                }</h5>
+                <p class="qteIngredient">${
+                  ingredient.quantity ? ingredient.quantity : ""
+                } ${ingredient.unit ? ingredient.unit : ""}</p>
+              </div>
+              `;
   }
-  console.log(ingredients.ingredient);
+
   return {
     id,
     image,
@@ -75,5 +58,6 @@ export function recipeTemplate(dataRecipe) {
     ustensils,
     ingredients,
     cardDOM,
+    ingredientsDOM,
   };
 }

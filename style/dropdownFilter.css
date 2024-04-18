@@ -83,34 +83,16 @@
   font-family: var(--font-filter);
   font-weight: 400;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 .listP:hover {
   font-weight: 800;
   background-color: var(--secondaryBgColor);
 }
-#tagList {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0 1rem;
-  font-family: var(--font-filter);
-  margin: 0 0 3rem 0;
-  display: none;
-}
-.tag {
-  background-color: yellow;
-  padding: 1rem;
-  border-radius: 10px;
-  font-weight: 400;
-}
-.fa-xmark {
-  font-size: x-large;
-  padding: 0 0 0 2rem;
-}
+
 #nbRecipes {
   font-size: 18px;
 }
-.showList,
-.showTag {
+.showList {
   display: flex;
 }
