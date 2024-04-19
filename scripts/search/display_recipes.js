@@ -10,5 +10,4 @@ export function displayRecipes(recipes) {
     const recipeCardDOM = recipeModel.cardDOM();
     containerCardRecipes.appendChild(recipeCardDOM);
   });
-
 }

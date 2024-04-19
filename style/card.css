@@ -2,7 +2,8 @@
 }
 .cardRecipe {
   width: 380px;
-  height: 731px;
+  /* height: 731px; */
+  height: 100%;
   background-color: white;
   border-radius: 10px;
   transition: all 1s ease-out;
@@ -45,13 +46,14 @@
   margin: 1rem 0;
 }
 .ingredientList {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
   /* margin: 1rem 0; */
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   gap: 0 3rem;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 .ingredient {
   margin: 1rem 0;
