@@ -9,7 +9,6 @@ import { tagSearch } from "./tag_search.js";
 import { displayTags } from "./display_tags.js";
 
 export function globalSearch() {
-  //   console.log("recherche");
   displayTags();
   const inputValue = document.getElementById("searchInput").value;
   const allRecipes = [...recipes];
