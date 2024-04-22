@@ -6,3 +6,11 @@
   width: 100%;
   gap: 3rem;
 }
+
+.hidden {
+  display: none;
+}
+
+#noResult {
+  font-size: x-large;
+}
