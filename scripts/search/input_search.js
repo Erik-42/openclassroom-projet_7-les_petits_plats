@@ -1,5 +1,6 @@
 import { tags } from "../utils/tags.js";
-import { majAppareil } from "./majAppareil.js";
+import { displayRecipes } from "./display_recipes.js";
+import { majAppareils } from "./majAppareils.js";
 import { majIngredients } from "./majIngredients.js";
 import { majUstensils } from "./majUstensiles.js";
 
@@ -10,22 +11,22 @@ export function inputSearch(value, recipes) {
   if (value.length >= 3 || tags) {
     // console.log("filtre by input", value);
     recipesFiltred = recipes.filter((recipe) =>
-      recipe.name.match(new RegExp(value, "i"))
+      recipe.name.toLowerCase().match(new RegExp(value, "i"))
     );
   }
   // if (
   //  recipe.name.toLowerCase().match(new RegExp(value, "i")) ||
   //   recipe.description.toLowerCase().match(new RegExp(value, "i")) ||
   //   recipe.appliance.toLowerCase().match(new RegExp(value, "i")) ||
-  //   recipe.ustensils.find((ingredient) => {
-  //     return ingredient.ingredient.toLowerCase().match(new RegExp(value, "i"));
+  //   recipe.ustensils.find((ustensil) => {
+  //     return ustensil.ustensil.toLowerCase().match(new RegExp(value, "i"));
   //   }) ||
   //   recipe.ingredients.find((ingredient) => {
   //     return ingredient.ingredient.toLowerCase().match(new RegExp(value, "i"));
   //   }) != undefined
   // ) {
   //   recipesFiltred = recipes.filter((recipe) =>
-  //     recipe.description.toLowerCase.match(new RegExp(value, "i"))
+  //     recipe.toLowerCase().match(new RegExp(value, "i"))
   //   );
   // }
 

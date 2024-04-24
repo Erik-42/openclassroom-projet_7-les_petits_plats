@@ -1,7 +1,8 @@
 import { tags } from "../utils/tags.js";
-import { majAppareil } from "./majAppareil.js";
+import { majAppareils } from "./majAppareils.js";
 import { majUstensils } from "./majUstensiles.js";
 import { majIngredients } from "./majIngredients.js";
+import { inputSearch } from "./input_search.js";
 import { globalSearch } from "./global_search.js";
 
 export function tagSearch(tag, recipes) {
@@ -15,17 +16,24 @@ export function tagSearch(tag, recipes) {
   //   }
   // });
 
-  let appliancesTags = { recipesFiltred, tags };
+  let searchTags = { recipesFiltred, tags };
   recipes.forEach((recipe) => {
     if (tags == recipe.appliance) {
-      tags.push(recipe.appliance);
-      // recipesFiltred = recipes.filter((tag) =>
-      //   tag.match(new RegExp(value, "i"))
-      // );
+      tags.push(majAppareils);
+      console.log(tags);
+
+      return recipesFiltred;
     }
-    if (tags.length === 0) return recipesFiltred;
+
+    // if (tags === ustensils) return majUstensils;
+    // if (tags === ingredients) return majIngredients;
+
+    if (tags.length === 0) return inputSearch;
+    console.log(recipe.appliance);
+    console.log(recipe.ustensil);
+    console.log(recipe.ingredient);
   });
-  console.log(appliancesTags);
-  return appliancesTags;
+  console.log(searchTags);
+  return searchTags;
 }
 console.log(tags);

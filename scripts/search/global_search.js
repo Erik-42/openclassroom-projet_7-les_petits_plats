@@ -2,7 +2,7 @@ import { recipes } from "../../assets/data/recipes.js";
 import { tags } from "../utils/tags.js";
 import { displayRecipes } from "./display_recipes.js";
 import { inputSearch } from "./input_search.js";
-import { majAppareil } from "./majAppareil.js";
+import { majAppareils } from "./majAppareils.js";
 import { majIngredients } from "./majIngredients.js";
 import { majUstensils } from "./majUstensiles.js";
 import { tagSearch } from "./tag_search.js";
@@ -18,7 +18,7 @@ export function globalSearch() {
     recipesFilterByTags = tagSearch(tag, recipesFilterByTags);
   });
   majIngredients(recipesFilterByTags);
-  majAppareil(recipesFilterByTags);
+  majAppareils(recipesFilterByTags);
   majUstensils(recipesFilterByTags);
   displayRecipes(recipesFilterByTags);
 }

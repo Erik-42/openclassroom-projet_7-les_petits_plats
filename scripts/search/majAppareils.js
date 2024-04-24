@@ -1,9 +1,10 @@
 import { globalSearch } from "./global_search.js";
 import { tags } from "../utils/tags.js";
 
-export function majAppareil(recipes) {
+export function majAppareils(recipes) {
   const liste = document.getElementById("appliancesList");
   liste.innerHTML = "";
+
   const myAppliances = new Set();
   recipes.forEach((recipe) => {
     myAppliances.add(recipe.appliance.toLowerCase());
