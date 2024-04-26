@@ -78,6 +78,8 @@ Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.
 
 Github: [https://erik-42.github.io/openclassroom-projet_7-les_petits_plats/](https://erik-42.github.io/openclassroom-projet_7-les_petits_plats/)
 
+test algo: https://jsben.ch/
+
 <!-- LICENSE -->
 
 ## License

@@ -27,7 +27,6 @@ export function majUstensils(recipes) {
           type: "ustensil",
           value: ustensil,
         });
-        console.log(tags);
         globalSearch();
       }
     });

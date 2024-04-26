@@ -17,6 +17,13 @@ export function globalSearch() {
   tags.forEach((tag) => {
     recipesFilterByTags = tagSearch(tag, recipesFilterByTags);
   });
+  if (recipesFilterByTags.length === 0) {
+    const noResult = document.getElementById("noResult");
+    noResult.textContent = `Aucune recette ne correspond à vos critères... vous pouvez chercher "tarte aux pommes", "poisson", etc.`;
+    noResult.classList.remove("hidden");
+  } else {
+    noResult.classList.add("hidden");
+  }
   majIngredients(recipesFilterByTags);
   majAppareils(recipesFilterByTags);
   majUstensils(recipesFilterByTags);

@@ -27,7 +27,6 @@ export function majIngredients(recipes) {
           type: "ingredient",
           value: ingredient,
         });
-        console.log(tags);
         globalSearch();
       }
     });

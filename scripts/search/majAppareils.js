@@ -26,7 +26,6 @@ export function majAppareils(recipes) {
           type: "appliance",
           value: appliance,
         });
-        console.log(tags);
         globalSearch();
       }
     });
