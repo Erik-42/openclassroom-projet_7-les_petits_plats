@@ -10,11 +10,9 @@ export function majUstensils(recipes) {
       myUstensils.add(ustensil.toLowerCase());
     });
   });
-  // console.log(myUstensils);
   const myUstensilsArray = Array.from(myUstensils);
   myUstensilsArray.sort((a, b) => a.localeCompare(b));
   myUstensilsArray.forEach((ustensil) => {
-    // liste.innerHTML += `<p class="listP">${ustensil}</p>`;
     const elem = document.createElement("p");
     elem.className = "listP";
     elem.innerText = ustensil;
@@ -32,5 +30,4 @@ export function majUstensils(recipes) {
     });
     liste.appendChild(elem);
   });
-  // console.log(myUstensilsArray);
 }

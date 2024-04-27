@@ -13,7 +13,6 @@ export function majIngredients(recipes) {
   const myIngredientsArray = Array.from(myIngredients);
   myIngredientsArray.sort((a, b) => a.localeCompare(b));
   myIngredientsArray.forEach((ingredient) => {
-    // liste.innerHTML += `<p class="listP">${ingredient}</p>`;
     const elem = document.createElement("p");
     elem.className = "listP";
     elem.innerText = ingredient;

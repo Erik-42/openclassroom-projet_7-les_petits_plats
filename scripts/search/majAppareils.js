@@ -31,5 +31,4 @@ export function majAppareils(recipes) {
     });
     liste.appendChild(elem);
   });
-  // console.log(myAppliancesArray);
 }

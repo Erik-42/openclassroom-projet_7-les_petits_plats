@@ -1,4 +1,4 @@
-export function inputSearch(value, recipes) {
+export function inputFilter(value, recipes) {
   //sur deuxième branche interdit filter, find, map, foreach, findindex, includes, etc...
   let recipesFiltred = [...recipes];
 
