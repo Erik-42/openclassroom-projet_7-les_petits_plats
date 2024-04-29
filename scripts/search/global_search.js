@@ -7,16 +7,18 @@ import { majIngredients } from "./majIngredients.js";
 import { majUstensils } from "./majUstensiles.js";
 import { tagSearch } from "./tag_search.js";
 import { displayTags } from "./display_tags.js";
+import { inputFilter } from "./input_filter.js";
 
 export function globalSearch() {
   displayTags();
-  const inputValue = document.getElementById("searchInput").value;
+  const inputValueSearch = document.getElementById("searchInput").value;
   const allRecipes = [...recipes];
-  const recipesFilterByInput = inputSearch(inputValue, allRecipes);
+  const recipesFilterByInput = inputSearch(inputValueSearch, allRecipes);
   let recipesFilterByTags = [...recipesFilterByInput];
   tags.forEach((tag) => {
     recipesFilterByTags = tagSearch(tag, recipesFilterByTags);
   });
+
   if (recipesFilterByTags.length === 0) {
     const noResult = document.getElementById("noResult");
     noResult.textContent = `Aucune recette ne correspond à vos critères... vous pouvez chercher "tarte aux pommes", "poisson", etc.`;
@@ -24,6 +26,7 @@ export function globalSearch() {
   } else {
     noResult.classList.add("hidden");
   }
+
   majIngredients(recipesFilterByTags);
   majAppareils(recipesFilterByTags);
   majUstensils(recipesFilterByTags);
