@@ -14,6 +14,10 @@ export function recipeTemplate(dataRecipe) {
 
   function cardDOM() {
     const cardRecipeStructure = document.createElement("div");
+    const ingredientsMap = ingredients.map((ingredient) =>
+      ingredientsDOM(ingredient)
+    );
+    // console.log(ingredientsMap);
     cardRecipeStructure.innerHTML = `
         <div class="cardRecipe">
           <div class="recipeBanner">
@@ -28,7 +32,7 @@ export function recipeTemplate(dataRecipe) {
             </div>
             <h4>Ingredients</h4>
             <div class="ingredientList">
-            ${ingredients.map((ingredient) => ingredientsDOM(ingredient))}
+            ${ingredientsMap.join("")}
             </div>
           </div>
         </div>`;

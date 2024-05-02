@@ -10,6 +10,7 @@ import { displayTags } from "./display_tags.js";
 
 export function globalSearch() {
   displayTags();
+
   const inputValueSearch = document
     .getElementById("searchInput")
     .value.toLowerCase();
@@ -20,12 +21,7 @@ export function globalSearch() {
     recipesFilterByTags = tagSearch(tag, recipesFilterByTags);
   });
 
-  // const inputValueFilter = document.querySelector("inputFilter").value;
-  // const itemFilterByInput = inputFilter(inputValueFilter, allRecipes);
-  // let itemsFilterByTags = [...itemFilterByInput];
-  // appliances.forEach((appliance) => {
-  //   itemsFilterByTags = majAppareils(appliance, itemsFilterByTags);
-  // });
+  // inputFilter();
 
   if (recipesFilterByTags.length === 0) {
     const noResult = document.getElementById("noResult");
