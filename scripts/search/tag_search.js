@@ -1,6 +1,5 @@
 export function tagSearch(tag, recipes) {
   let recipesFiltred = [...recipes];
-  console.log(tag.type);
   if (tag.type == "ingredient") {
     recipesFiltred = recipesFiltred.filter((recipe) =>
       recipe.ingredients.some(

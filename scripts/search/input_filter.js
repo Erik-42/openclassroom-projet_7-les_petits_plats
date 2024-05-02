@@ -1,31 +1,24 @@
-export function inputFilter(
-  value,
-  recipes,
-  appliances,
-  ustensils,
-  ingredients
-) {
-  // const inputValueFilter = document.getElementById("inputFilter").value;
-  // const itemFilterByInput = inputFilter(inputValueFilter, allRecipes);
-  // let itemsFilterByTags = [...itemFilterByInput];
-  // tags.forEach((tag) => {
-  //   itemsFilterByTags = tagSearch(tag, itemsFilterByTags);
-  // });
+import { majAppareils } from "./majAppareils.js";
 
-  let recipesFiltred = [...recipes];
+export function inputFilter(value, appliances) {
+  let aplliancesFiltred = majAppareils.myAppliancesArray;
 
-  if (value.length >= 1) {
-    recipesFiltred = recipes.filter(
-      (recipe) =>
-        recipe.appliance.toLowerCase().match(new RegExp(value, "i")) ||
-        recipe.ustensils.some((ustensil) =>
-          ustensil.ustensil.toLowerCase().match(new RegExp(value, "i"))
-        ) ||
-        recipe.ingredients.some((ingredient) =>
-          ingredient.ingredient.toLowerCase().match(new RegExp(value, "i"))
-        )
+  console.log(aplliancesFiltred);
+
+  const inputValueFilterAppliance = document
+    .getElementById("searchAppliance")
+    .value.toLowerCase();
+
+  console.log(inputValueFilterAppliance);
+
+  if (inputValueFilterAppliance.value.length >= 1) {
+    aplliancesFiltred = appliances.filter((appliance) =>
+      appliance.toLowerCase().match(new RegExp(value, "i"))
     );
+    // const appliancesFilterByInput = majAppareils(
+    //   inputValueFilterAppliance,
+    //   aplliancesFiltred
+    // );
   }
-
-  return recipesFiltred;
+  return aplliancesFiltred;
 }

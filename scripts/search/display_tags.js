@@ -1,5 +1,6 @@
 import { tags } from "../utils/tags.js";
 import { globalSearch } from "./global_search.js";
+
 export function displayTags() {
   const liste = document.getElementById("tagList");
   liste.innerHTML = "";

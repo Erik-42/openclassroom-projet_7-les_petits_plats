@@ -7,17 +7,25 @@ import { majIngredients } from "./majIngredients.js";
 import { majUstensils } from "./majUstensiles.js";
 import { tagSearch } from "./tag_search.js";
 import { displayTags } from "./display_tags.js";
-import { inputFilter } from "./input_filter.js";
 
 export function globalSearch() {
   displayTags();
-  const inputValueSearch = document.getElementById("searchInput").value;
+  const inputValueSearch = document
+    .getElementById("searchInput")
+    .value.toLowerCase();
   const allRecipes = [...recipes];
   const recipesFilterByInput = inputSearch(inputValueSearch, allRecipes);
   let recipesFilterByTags = [...recipesFilterByInput];
   tags.forEach((tag) => {
     recipesFilterByTags = tagSearch(tag, recipesFilterByTags);
   });
+
+  // const inputValueFilter = document.querySelector("inputFilter").value;
+  // const itemFilterByInput = inputFilter(inputValueFilter, allRecipes);
+  // let itemsFilterByTags = [...itemFilterByInput];
+  // appliances.forEach((appliance) => {
+  //   itemsFilterByTags = majAppareils(appliance, itemsFilterByTags);
+  // });
 
   if (recipesFilterByTags.length === 0) {
     const noResult = document.getElementById("noResult");
