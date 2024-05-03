@@ -21,8 +21,6 @@ export function globalSearch() {
     recipesFilterByTags = tagSearch(tag, recipesFilterByTags);
   });
 
-  // inputFilter();
-
   if (recipesFilterByTags.length === 0) {
     const noResult = document.getElementById("noResult");
     noResult.textContent = `Aucune recette ne correspond à vos critères... vous pouvez chercher "tarte aux pommes", "poisson", etc.`;
