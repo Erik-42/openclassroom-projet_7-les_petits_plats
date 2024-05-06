@@ -10,7 +10,7 @@ export function recipeTemplate(dataRecipe) {
     ingredients,
   } = dataRecipe;
 
-  const picture = `../../assets/images_recipes/${image}`;
+  const picture = `./assets/images_recipes/${image}`;
 
   function cardDOM() {
     const cardRecipeStructure = document.createElement("div");
