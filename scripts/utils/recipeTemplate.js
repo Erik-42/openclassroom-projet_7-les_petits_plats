@@ -17,7 +17,6 @@ export function recipeTemplate(dataRecipe) {
     const ingredientsMap = ingredients.map((ingredient) =>
       ingredientsDOM(ingredient)
     );
-    // console.log(ingredientsMap);
     cardRecipeStructure.innerHTML = `
         <div class="cardRecipe">
           <div class="recipeBanner">

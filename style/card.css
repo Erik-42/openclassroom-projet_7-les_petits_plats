@@ -1,8 +1,5 @@
-#containerCardRecipes {
-}
 .cardRecipe {
   width: 380px;
-  /* height: 731px; */
   height: 100%;
   background-color: white;
   border-radius: 10px;

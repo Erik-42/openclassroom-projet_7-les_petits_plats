@@ -14,7 +14,6 @@ export function inputFilter(e) {
     );
     myAppliancesFiltred.sort((a, b) => a.localeCompare(b));
     majListeAndEvent(myAppliancesFiltred, liste, "appliance");
-    // console.log(myAppliancesFiltred);
   } else if (balise.id == "searchUstensil") {
     const liste = document.getElementById("ustensilsList");
     liste.innerHTML = "";
