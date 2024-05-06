@@ -70,6 +70,14 @@ Pour choisir le meilleur algorithme, il faut tester leurs performances. Pour ça
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Fonctionnement -->
+
+## Fonctionnement
+
+Algorigramme
+
+![alt text](benchmark/algorigramme.drawio.png)
+
 <!-- Liens Projet -->
 
 ## Testez le projet
@@ -78,7 +86,13 @@ Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.
 
 Github: [https://erik-42.github.io/openclassroom-projet_7-les_petits_plats/](https://erik-42.github.io/openclassroom-projet_7-les_petits_plats/)
 
-test algo: https://jsben.ch/
+<!-- Benchmark -->
+
+## Benchmark
+
+Test algorithme: https://jsben.ch/
+
+![alt text](benchmark/JSBEN-CH-Benchmarking-for-JavaScript-.png)
 
 <!-- LICENSE -->
 
