@@ -90,6 +90,8 @@ Github: [https://erik-42.github.io/openclassroom-projet_7-les_petits_plats/](htt
 
 ## Benchmark
 
+[Fiche d'investigation de fonctionnalité](<benchmark/Fiche d'investigation de fonctionnalité.xlsx>)
+
 Test algorithme: https://jsben.ch/
 
 ![alt text](benchmark/JSBEN-CH-Benchmarking-for-JavaScript-.png)
