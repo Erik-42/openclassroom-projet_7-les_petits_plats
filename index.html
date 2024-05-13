@@ -18,7 +18,7 @@
     <meta
       property="og:description"
       content="permet de trouver et reproduire nos meilleures recettes de cuisine">
-    <meta property="og:image" content="./assets/logos/logo.png">
+    <meta property="og:image" content="./assets/logos/logo.png>
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -105,13 +105,13 @@
         <div id="filterLine">
           <div id="divFilters">
             <div id="divIngredients" class="divList" tabindex="0">
-              <button id="btnIngredients" class="buttonFilter">
+              <div id="btnIngredients" class="buttonFilter">
                 <div class="containerButton">
                   <span class="buttonTitle">Ingredients</span>
                   <span class="fas fa-chevron-down"></span>
                 </div>
-              </button>
-              <ul id="listIngredients" class="ulList">
+              </div>
+              <div id="listIngredients" class="ulList">
                 <div class="containerInput">
                   <input
                     type="search"
@@ -119,13 +119,11 @@
                     id="searchIngredients"
                     class="inputFilter"
                     aria-label="Rechercher un ingrédient"
-                    name="searchIngredient"
-                  />
+                    name="searchIngredient">
                   <span class="loupe fas fa-search"></span>
                 </div>
-                <div id="ingredientsList" class="list">
-                </div>
-              </ul>
+                <div id="ingredientsList" class="list"></div>
+              </div>
             </div>
 
             <div id="divAppliances" class="divList" tabindex="0">
@@ -135,7 +133,7 @@
                   <span class="fas fa-chevron-down"></span>
                 </div>
               </button>
-              <ul id="listAppliances" class="ulList">
+              <div id="listAppliances" class="ulList">
                 <div class="containerInput">
                   <input
                     type="search"
@@ -143,13 +141,11 @@
                     id="searchAppliance"
                     class="inputFilter"
                     aria-label="Rechercher un appareil"
-                    name="searchAppliance"
-                  />
+                    name="searchAppliance">
                   <span class="loupe fas fa-search"></span>
                 </div>
-                <div id="appliancesList" class="list">
-                </div>
-              </ul>
+                <div id="appliancesList" class="list"></div>
+              </div>
             </div>
 
             <div id="divUstensils" class="divList" tabindex="0">
@@ -159,7 +155,7 @@
                   <span class="fas fa-chevron-down"></span>
                 </div>
               </button>
-              <ul id="listUstensils" class="ulList">
+              <div id="listUstensils" class="ulList">
                 <div class="containerInput">
                   <input
                     type="search"
@@ -170,9 +166,8 @@
                     name="searchUstensil">
                   <span class="loupe fas fa-search"></span>
                 </div>
-                <div id="ustensilsList" class="list">
-                </div>
-              </ul>
+                <div id="ustensilsList" class="list"></div>
+              </div>
             </div>
           </div>
           <div id="nbRecipes"></div>
@@ -195,25 +190,7 @@
       </section>
 
       <!-- cards -->
-      <div id="containerCardRecipes" class="containerCardRecipes">
-        <div class="cardRecipe">
-          <div class="recipeBanner">
-            <img src="./assets/images_recipes/Recette01.jpg" alt="recette">
-            <div class="preperTime"></div>
-          </div>
-          <div class="containerRecipe">
-            <h3 class="recipeTitle"></h3>
-            <h4>Recette</h4>
-            <div class="descriptionRecipe">
-            </div>
-            <h4>Ingredients</h4>
-            <div class="ingredientsList">
-              
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="containerCardRecipes" class="containerCardRecipes"></div>
       <!-- Result search -->
       <span id="noResult" class="hidden"></span>
     </main>
