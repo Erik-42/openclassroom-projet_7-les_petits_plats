@@ -1,5 +1,3 @@
-import { globalSearch } from "./global_search.js";
-import { tags } from "../utils/tags.js";
 import { set } from "../utils/setIngredients.js";
 import { majListeAndEvent } from "../utils/majListeAndEvent.js";
 export function majIngredients(recipes) {
