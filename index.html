@@ -18,7 +18,7 @@
     <meta
       property="og:description"
       content="permet de trouver et reproduire nos meilleures recettes de cuisine">
-    <meta property="og:image" content="./assets/logos/logo.png>
+    <meta property="og:image" content="./assets/logos/logo.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -101,7 +101,7 @@
     </header>
     <main>
       <!-- Filters -->
-      <section id="filters">
+      <div id="filters">
         <div id="filterLine">
           <div id="divFilters">
             <div id="divIngredients" class="divList" tabindex="0">
@@ -127,12 +127,12 @@
             </div>
 
             <div id="divAppliances" class="divList" tabindex="0">
-              <button id="btnAppliances" class="buttonFilter">
+              <div id="btnAppliances" class="buttonFilter">
                 <div class="containerButton">
                   <span class="buttonTitle">Appareils</span>
                   <span class="fas fa-chevron-down"></span>
                 </div>
-              </button>
+              </div>
               <div id="listAppliances" class="ulList">
                 <div class="containerInput">
                   <input
@@ -149,12 +149,12 @@
             </div>
 
             <div id="divUstensils" class="divList" tabindex="0">
-              <button id="btnUstensils" class="buttonFilter">
+              <div id="btnUstensils" class="buttonFilter">
                 <div class="containerButton">
                   <span class="buttonTitle">Ustensiles</span>
                   <span class="fas fa-chevron-down"></span>
                 </div>
-              </button>
+              </div>
               <div id="listUstensils" class="ulList">
                 <div class="containerInput">
                   <input
@@ -187,7 +187,7 @@
             <span class="fa fa-xmark tagBtn"></span>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- cards -->
       <div id="containerCardRecipes" class="containerCardRecipes"></div>
