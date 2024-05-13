@@ -76,7 +76,7 @@ Pour choisir le meilleur algorithme, il faut tester leurs performances. Pour ça
 
 Algorigramme
 
-![alt text](benchmark/algorigramme.drawio.png)
+![alt text](benchmark/rush/algorigramme.drawio.png)
 
 <!-- Liens Projet -->
 
@@ -94,7 +94,7 @@ Github: [https://erik-42.github.io/openclassroom-projet_7-les_petits_plats/](htt
 
 Test algorithme: https://jsben.ch/
 
-![alt text](benchmark/JSBEN-CH-Benchmarking-for-JavaScript-.png)
+![alt text](benchmark/rush/JSBEN-CH-Benchmarking-for-JavaScript-.png)
 
 <!-- LICENSE -->
 
