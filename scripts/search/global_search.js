@@ -1,4 +1,5 @@
-import { recipes } from "../../assets/data/recipes.js";
+// import { recipes } from "../../assets/data/recipes.js";
+import {getRecipes} from "../utils/getData.js"
 import { tags } from "../utils/tags.js";
 import { displayRecipes } from "./display_recipes.js";
 import { inputSearch } from "./input_search.js";
@@ -8,13 +9,13 @@ import { majUstensils } from "./majUstensiles.js";
 import { tagSearch } from "./tag_search.js";
 import { displayTags } from "./display_tags.js";
 
-export function globalSearch() {
+export async function globalSearch() {
   displayTags();
 
   const inputValueSearch = document
     .getElementById("searchInput")
     .value.toLowerCase();
-  const allRecipes = [...recipes];
+  const allRecipes = await getRecipes(); //[...recipes];
   const recipesFilterByInput = inputSearch(inputValueSearch, allRecipes);
   let recipesFilterByTags = [...recipesFilterByInput];
   tags.forEach((tag) => {
